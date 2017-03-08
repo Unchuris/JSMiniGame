@@ -44,10 +44,6 @@ function stopSetTimeout4() {window.clearTimeout(a4);}
 function setTimeoutFinish(callback, time) {finish = window.setTimeout(callback, time);}
 function stopSetTimeoutFinish() {window.clearTimeout(finish);}
 
-function getLife() {return name;}
-function setLife(name) {name;}
-
-
 
 function makeHide(name) {
     return function() {     
@@ -65,6 +61,17 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function InvervalTimer(callback, interval) {
+        var timerId = window.setInterval(callback, interval);
+        this.clear = function () {
+            window.clearInterval(timerId);
+        };
+
+        this.run = function () {
+            timerId = window.setInterval(callback, interval);
+        };
+    }
+    
 function create() {
     document.getElementById("start").style.display = "none";
     document.getElementById("restart").style.display = "block";
@@ -177,16 +184,8 @@ function Check() {
     } 
     }
 }
-function InvervalTimer(callback, interval) {
-        var timerId = window.setInterval(callback, interval);
-        this.clear = function () {
-            window.clearInterval(timerId);
-        };
 
-        this.run = function () {
-            timerId = window.setInterval(callback, interval);
-        };
-    }
+
 function setTimeout11(callback, time) {a11 = window.setTimeout(callback, time);}
 function stopSetTimeout11() {window.clearTimeout(a11);}
 
