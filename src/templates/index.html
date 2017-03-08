@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+        {% block main %}
+<body >
+ <header class="header">
+ 	<div class="header__block-one">
+    	<div id="header_areaOne"></div>
+    </div><div 
+    class="header__block-two">
+     	<div id="header_areaTwo"></div>
+    </div><div
+     class="header__block-three">
+     	<div id="header_areaThree"></div>
+    </div><div 
+    class="header__block-four">
+     	<div id="header_areaFour"></div>
+    </div>
+     <div id = "number">10</div>
+     <div id = "start"><a onclick="create()">Start</a></div>
+     <div id = "restart"><a onclick="window.location.reload(true);">Restart</a></div>
+ </header>
+<script src="../scripts/scripts.js"></script>
+</body>
+{% endblock %}
